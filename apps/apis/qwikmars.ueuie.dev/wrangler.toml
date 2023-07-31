@@ -1,0 +1,27 @@
+name = "ueuiedev-qwikmars"
+main = "src/index.ts"
+compatibility_date = "2023-06-21"
+
+[[routes]]
+zone_name = "ueuie.dev"
+pattern = "qwikmars.ueuie.dev/trpc"
+
+[[routes]]
+zone_name = "ueuie.dev"
+pattern = "qwikmars.ueuie.dev/trpc/*"
+
+[[routes]]
+zone_name = "ueuie.dev"
+pattern = "qwikmars.ueuie.dev/auth"
+
+[[routes]]
+zone_name = "ueuie.dev"
+pattern = "qwikmars.ueuie.dev/auth/*"
+
+[[d1_databases]]
+binding = "DB"
+database_id = "a78ad272-ee3c-4514-a756-792e9e4c9c30"
+database_name = "ueuiedev-qwikmars"
+migrations_dir = "./drizzle"
+migrations_table = "__drizzle_migrations"
+database_preview_id = "d5108420-2b9e-45c8-9f62-a5415761abda"

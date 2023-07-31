@@ -1,0 +1,16 @@
+{
+  "css.lint.unknownAtRules": "ignore",
+  "files.exclude": {
+    "**/.turbo": true,
+    // dependencies
+    "**/node_modules": true,
+    // build output
+    "**/packages/**/dist": true,
+    "**/apps/**/dist.type": true,
+    // worker state
+    "**/.wrangler": true,
+    // cache
+    "**/.eslintcache": true,
+    "**/.cache": true
+  },
+}

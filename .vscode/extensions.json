@@ -1,0 +1,10 @@
+{
+  "recommendations": [
+    "tamasfe.even-better-toml",
+    "dbaeumer.vscode-eslint",
+    "unifiedjs.vscode-mdx",
+    "esbenp.prettier-vscode",
+    "github.vscode-github-actions"
+  ],
+  "unwantedRecommendations": []
+}

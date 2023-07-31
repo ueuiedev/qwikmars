@@ -1,0 +1,12 @@
+# eslint
+.eslintcache
+
+# types build
+dist.type
+
+# cloudflare
+.wrangler
+.dev.vars
+
+# database
+./drizzle

@@ -1,0 +1,4 @@
+{
+  "extends": "@bosscard/eslint-config/worker",
+  "root": true
+}

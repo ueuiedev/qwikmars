@@ -1,0 +1,38 @@
+{
+  "name": "@ueuie.dev/qwikmars.ueuie.dev.api",
+  "private": true,
+  "scripts": {
+    "dev": "npm-run-all -s db.drizzle.generate db.apply.local -p dev.*",
+    "dev.cf": "cross-env NODE_ENV=development NO_D1_WARNING=true wrangler dev src/index.ts --port 5578",
+    "dev.ts": "tsup --watch",
+    "ncu": "ncu",
+    "build": "run-p build.*",
+    "build.ts": "cross-env NODE_ENV=production tsup",
+    "clean": "rimraf -g -V -I -- node_modules .turbo dist",
+    "check": "tsc --noEmit",
+    "db.apply": "wrangler d1 migrations apply ueuiedev-qwikmars",
+    "db.apply.local": "wrangler d1 migrations apply ueuiedev-qwikmars --local",
+    "db.drizzle.generate": "drizzle-kit generate:sqlite",
+    "db.init.create": "npx wrangler d1 create ueuiedev-qwikmars",
+    "db.init.dev.create": "npx wrangler d1 create ueuiedev-qwikmars-preview",
+    "format": "prettier --write .",
+    "eslint": "eslint --cache --ext .ts --ext .json --report-unused-disable-directives . ",
+    "eslint.fix": "eslint --cache --ext .ts --ext .json --fix --report-unused-disable-directives .",
+    "deploy": "cross-env NODE_ENV=production NO_D1_WARNING=true wrangler deploy --minify ./src/index.ts"
+  },
+  "dependencies": {
+    "@bosscard/eslint-config": "^0.1.0",
+    "@hono/trpc-server": "^0.1.0",
+    "@trpc/server": "^10.36.0",
+    "drizzle-orm": "^0.27.2",
+    "hono": "^3.3.4",
+    "toucan-js": "^3.2.0"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20230724.0",
+    "drizzle-kit": "^0.19.12",
+    "tsup": "^7.1.0",
+    "typescript": "^5.1.6",
+    "wrangler": "^3.4.0"
+  }
+}

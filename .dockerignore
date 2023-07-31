@@ -1,0 +1,25 @@
+# Node Modules
+**/node_modules
+
+# Git + GitHub
+.git
+.github
+
+# Turbo
+.turbo
+
+# Editor
+.idea
+
+# Dependencies
+.pnp
+.pnp.js
+
+# Build Output
+**/out
+packages/**/out
+
+# ----
+.DS_Store
+*.log
+*.pem
